@@ -4,12 +4,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import org.springframework.stereotype.Repository;
-
-import com.spring.jdbc.util.DataBaceConnectionUtil;
 import com.spring.jdbc.domain.Customer;
+import com.spring.jdbc.util.DataBaceConnectionUtil;
 
-@Repository
 public class CustomerRepository implements ICustomerRepository {
 
 	@Override

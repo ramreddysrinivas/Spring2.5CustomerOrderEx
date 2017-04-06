@@ -12,20 +12,17 @@ import com.spring.jdbc.service.CustomerService;
 public class Demo {
 	public static void main(String[] args) {
 		Demo demo = new Demo();
-		ApplicationContext context = new ClassPathXmlApplicationContext(
-				"spring-beans.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("spring-beans.xml");
 
 		CustomerService customerServiceobj = (CustomerService) context
 				.getBean("customerService");
 	   ICustomerRepository customerRepository =customerServiceobj.getCustomerRepository();
 	   
 	 Customer customer = demo.prepareCustomer(1234,"name2","ramreddy2@gmail.com");
-	// demo.saveCustomer(customer,customerServiceobj);
+	 demo.saveCustomer(customer,customerServiceobj);
 		
-		
-		
-		System.out.println("customerServiceobj = " + customerServiceobj);
-		System.out.println("customerrepository = " + customerRepository);
+//		System.out.println("customerServiceobj = " + customerServiceobj);
+//		System.out.println("customerrepository = " + customerRepository);
 
 		
 	}

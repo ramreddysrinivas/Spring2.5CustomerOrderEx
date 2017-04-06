@@ -1,18 +1,18 @@
 package com.spring.jdbc.service;
 
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import com.spring.jdbc.domain.Customer;
 import com.spring.jdbc.exception.InvalidInputException;
 import com.spring.jdbc.repository.ICustomerRepository;
 
-@Service
 public class CustomerService implements ICustomerService {
 	
-	@Autowired
 	private ICustomerRepository customerRepository;
+
+	public void setCustomerRepository(ICustomerRepository customerRepository) {
+		this.customerRepository = customerRepository;
+	}
 
 	public ICustomerRepository getCustomerRepository() {
 		return customerRepository;
